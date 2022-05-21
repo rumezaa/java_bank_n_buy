@@ -2,6 +2,7 @@
 public class Coins {
     public double value;
 
+    //for gettign the value of a number of the same coins (usage in GUI: Transact and Deposit)
     public Coins(String coin_name, int amnt) {
 
         switch (coin_name) {

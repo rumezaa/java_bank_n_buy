@@ -313,7 +313,7 @@ public class GUI {
                 "SMALLEST COIN: "+Calculate.get_smallest(wallet.get_bank())+" ");
 
         main.add(balance);
-
+        System.out.println(wallet.get_bank());
         return main;
     }
 
@@ -382,8 +382,10 @@ public class GUI {
                         //gets the change
                         ArrayList<String> change = Calculate.get_change(prices[finalI],payment);
 
-                        wallet.Transact(payment, prices[finalI]);
-                        wallet.Deposit(change);
+                        wallet.transact_payment(payment, prices[finalI]);
+
+                        //deposit the change
+                        wallet.deposit_change(change);
 
 
                         JDialog dia = new JDialog();

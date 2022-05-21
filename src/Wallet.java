@@ -20,21 +20,24 @@ public class Wallet {
 
     }
 
-    public void Deposit(ArrayList<String> types){
+    public void deposit_change(ArrayList<String> types){
         arr.addAll(types);
     }
 
 
 
-    //transaction methods for taking coins out of the wallet
-    public void Transact(ArrayList<String> types, double amnt){
-        arr.removeAll(types);
+
+    public void transact_payment(ArrayList<String> types, double amnt){
+
+        for (int i = 0; i < types.size(); i++) {
+            arr.remove(types.get(i));
+        }
 
         balance -= amnt;
 
     }
 
-
+    //transaction methods for taking coins out of the wallet
     public void Transact(String type, double amnt, int type_amnt){
         //iterate over array and remove the specified coin the specified amount of times
         for (int i = 0; i < type_amnt; i++) {

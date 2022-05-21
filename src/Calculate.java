@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Calculate {
-
+    //gets teh coinds we need to pay
     public static ArrayList<String> dues(ArrayList<String> arr, double amnt){
 
         ArrayList<String> dues = new ArrayList<>();
@@ -152,11 +152,12 @@ public class Calculate {
 
         switch (coin_name) {
             case "Dime" -> val = 0.10;
-            case "Nickle" -> val = 0.05;
+            case "Nickle" -> val = 0.050;
             case "Toonie" -> val = 2.00;
             case "Loonie" -> val = 1.00;
             case "Penny" -> val = 0.01;
         }
+
         return val;
     }
 
